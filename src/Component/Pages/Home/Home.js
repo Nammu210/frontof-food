@@ -99,12 +99,12 @@ const Home = () => {
       </div>
       <Craving/>
       <Explore/>
-      <div className="ad-explore"></div>
+      <div className="ad-explore"> <h1> Advertisement</h1></div>
       <br/>
       <Trending/>
       <Miss/>
       <Ideas/>
-      <div className="ad-idea"></div>
+      <div className="ad-idea"><h1> Advertisement</h1></div>
       <PeelPeach/>
       <br/>
       <FooterSearchBar/>
