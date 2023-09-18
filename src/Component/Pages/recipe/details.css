@@ -37,7 +37,7 @@
     background-color: white;
 }
 .ad-wrapper{
-    position: absolute;
+    position: fixed;
     top: 10rem;
     height: 70vh;
     width: 100%;
