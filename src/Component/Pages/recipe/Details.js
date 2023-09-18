@@ -210,6 +210,7 @@ const Details = () => {
           </div>
 
           <div className="ad-container">
+            <h1>Advertisement</h1>
             <div className="social-icons"></div>
             <div className="ad-wrapper ad">
               {/* <img src={ad} alt="adverise" /> */}
