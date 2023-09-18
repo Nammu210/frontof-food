@@ -35,13 +35,14 @@
     width: 20rem;
     /* border: 1px solid white; */
     background-color: white;
+    text-align: center;
 }
 .ad-wrapper{
     position: fixed;
     top: 10rem;
     height: 70vh;
     width: 100%;
-    /* background-image:url(); */
+    
 }
 
 .title-wrapper{
