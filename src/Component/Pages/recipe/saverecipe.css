@@ -9,6 +9,9 @@
     align-items: center;
 }
 
+.plus{
+    height: 100px;
+}
 .save-title-wrapper{
     width: 50%;
     display: flex;
@@ -75,7 +78,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     align-items: center;
-    color: rgb(185, 0, 185);
+    color: black;
     cursor: pointer;
 }
 
@@ -86,10 +89,18 @@
     font-size: 1.5rem;
     font-weight: 500;
     align-items: center;   
-    color: rgb(185, 0, 185);
+    color: black;
     cursor: pointer;
 }
-
+.plus{
+    color: purple;
+}
+.pli{
+    margin-top: -10px;
+}
+.pl{
+    margin-top: -30px;
+}
 .saved-recipe-container{
     background-color: rgb(234, 233, 233);
     width: 100%;
@@ -134,28 +145,29 @@
 .discover-btn-container{
     background-color: white;
     height: 22rem;
-    /* width: 15rem; */
     display: flex;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
+    top: 10px;
 }
 
 .discover-btn-wrapper{
-    height: 50%;
+    height: 70%;
     width: 13rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color:black;
 }
 
 .discover-btn-wrapper div img{
     width: 2.5rem;
     border-radius: 50%;
     transform: rotate(45deg);
-    color: purple;
+    color:violet;
 }
 
 .saved-recipe-card{

@@ -1,5 +1,4 @@
 import React from "react";
-import "./ideas.css";
 import { NavLink } from "react-router-dom";
 
 import ideasImg1 from "../../../../Assets/Homepage/ideas/idea1.webp";

@@ -25,7 +25,6 @@ const NavFile=()=> {
       });
   }
  
-
   const handleMobileView = () => {
     setMobileView(!mobileView);
   };

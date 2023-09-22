@@ -1,5 +1,5 @@
 import React from "react";
-import "./miss.css";
+
 import { NavLink } from "react-router-dom";
 
 import dmImg1 from "../../../../Assets/Homepage/dontmiss/dm1.webp";

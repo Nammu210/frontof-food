@@ -236,6 +236,7 @@ button{
     width: 45px;
     height: 45px;
     border-radius: 50px;
+    color: blue;
 }
 
 .navbar-logged-in-dropdown-content{

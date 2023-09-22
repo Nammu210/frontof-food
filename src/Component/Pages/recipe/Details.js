@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { BsCamera, BsDownload, BsSave } from "react-icons/bs";
 import { BsPrinter } from "react-icons/bs";
 import { BsShare } from "react-icons/bs";
-import FooterSearchRecipe from "../../Footer/SearchRecipe";
+import SearchRecipe from "../../Footer/SearchRecipe";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { host } from "../../Utility/api";
@@ -21,27 +21,30 @@ const Details = () => {
   const query = queryParams.get("q");
 
   console.log(query);
-
-
-  const handleSaveRecipe = async (recipe) => {
+  const handleSaveRecipe = (recipe) => {
+    console.log(recipe, "recipe from details");
+    const email = localStorage.getItem("email");
     const token = localStorage.getItem("token");
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
-    axios.put(`${host}/recipe/saverecipe`).then((res) => {
-      console.log(res.data);
-      toast.success(`recipes added to saves`, {
+    if (token) {
+      axios.post(`${host}/recipe/saverecipe/${email}`, { email, recipe }).then((res) => {
+        toast.success(`recipes added to saves`, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      });
+    } else {
+      toast.info(`Please Login first`, {
         position: toast.POSITION.TOP_RIGHT,
       });
-    });
+    }
   };
 
   useEffect(() => {
     fetchRecipeDetails(query).then((res) => {
-      console.log(res);
+      // console.log(res);
       setData(res.hits);
     });
   }, [query]);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="yellow-container">
@@ -198,7 +201,7 @@ const Details = () => {
                             </div>
 
                             <div className="also-title">
-                              <p>{item.recipe.label}</p>
+                              {/* <p>{item.recipe.label}</p> */}
                             </div>
                           </NavLink>
                         </div>
@@ -210,10 +213,8 @@ const Details = () => {
           </div>
 
           <div className="ad-container">
-           
             <div className="social-icons"></div>
             <div className="ad-wrapper ad">
-            <h1>Advertisement</h1>
               {/* <img src={ad} alt="adverise" /> */}
             </div>
           </div>
@@ -221,7 +222,7 @@ const Details = () => {
       ) : (
         "Loading"
       )}
-      <FooterSearchRecipe />
+      <SearchRecipe />
     </>
   );
 };

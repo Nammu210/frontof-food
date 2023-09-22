@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify'
 import NavFile from '../Navbar/Nav/NavFile'
 
-const Rootlayout = () => {
+const Service = () => {
   return (
     <Provider store={Store}>
         <NavFile/>
@@ -20,4 +20,4 @@ const Rootlayout = () => {
   )
 }
 
-export default Rootlayout
+export default Service

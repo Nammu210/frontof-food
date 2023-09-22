@@ -5,25 +5,22 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
-const FooterSearchRecipe = () => {
+const SearchRecipe = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
 
-  const APP_ID = "591bd3cd";
-  const APP_KEY = "ee49bf3041e13fa627976b22e7cd9ebb";
+  const APP_ID = "177447bf";
+  const APP_KEY = "4fc2078f8be2794a9ccef24c13098344";
 
   const getSearchRecipes = (searchQuery) => {
-    axios
-      .get(
-        `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=60`
-      )
+    axios.get(`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=60`)
       .then((response) => setData(response.data.hits))
       .catch((error) => console.log("Error", error));
     console.log(data);
   };
   return (
     <>
-      <div id="pink-searchbar">
+       <div id="pink-searchbar">
         <div>
           <div id="pink-searchbar-container">
             <div id="pink-searchbar-search-bar-and-text-container">
@@ -33,13 +30,16 @@ const FooterSearchRecipe = () => {
                   <AiOutlineSearch fontSize="1.5rem" />
                   <input
                     type="search"
-                    placeholder="Search here or try our suggestions below"
+                    placeholder="Search"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   ></input>
-                  {/* <button onClick={() => getSearchRecipes(search)}>
+                  <button
+                    id="search-btn"
+                    onClick={() => getSearchRecipes(search)}
+                  >
                     SEARCH
-                  </button> */}
+                  </button>
                 </div>
               </div>
             </div>
@@ -47,29 +47,29 @@ const FooterSearchRecipe = () => {
           <div id="pink-searchbar-suggested">
             <div id="pink-searchbar-suggested-container">
               <div>
-                <Link to=""><i>air fryer recipes</i></Link>
+                <Link to="">air fryer recipes</Link>
               </div>
               <div>
-                <Link to=""><i> slow-cooker faves </i></Link>
+                <Link to=""> slow-cooker faves </Link>
               </div>
               <div>
-                <Link to=""><i> top copycat recipes</i></Link>
+                <Link to="">top copycat recipes</Link>
               </div>
               <div>
-                <Link to=""><i> japanese foods </i></Link>
+                <Link to="">japanese foods</Link>
               </div>
               <div>
-                <Link to=""><i>weeknight eats</i></Link>
+                <Link to="">weeknight eats</Link>
               </div>
               <div>
-                <Link to=""><i>healthy lunches </i></Link>
+                <Link to="">healthy lunches</Link>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div id="pink-searchbar-search-search-data">
-        {/* <h2>SEARCH RESULTS . . .</h2> */}
+       
         <div id="pink-searchbar-search-search-data-container">
           <div id="pink-searchbar-search-search-data-cards-container">
             {data.map((element, index) => (
@@ -87,4 +87,4 @@ const FooterSearchRecipe = () => {
   );
 };
 
-export default FooterSearchRecipe;
+export default SearchRecipe;

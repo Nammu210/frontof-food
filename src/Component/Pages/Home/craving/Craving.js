@@ -1,6 +1,5 @@
 import React from 'react'
 import './craving.css'
-
 import cravingImg1 from '../../../../Assets/Homepage/craving/craving1.webp'
 import cravingImg2 from '../../../../Assets/Homepage/craving/craving2.webp'
 import cravingImg3 from '../../../../Assets/Homepage/craving/craving3.webp'

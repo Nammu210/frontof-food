@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await axios.post(`${host}/user/login`, user);
+    const res = await axios.post(`${host}/userdata/login`, user);
     console.log(res.data.msg);
     const token = res.data.token;
     console.log(res.data)

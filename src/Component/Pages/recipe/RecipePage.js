@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { fetchRecipe } from "../../Utility/FetchApi/FetchApi";
 import "./recipe.css";
-import FooterSearchRecipe from "../../Footer/SearchRecipe";
+import SearchRecipe from "../../Footer/SearchRecipe";
 
 const RecipePage = () => {
   const [data, setData] = useState(null);
@@ -95,7 +95,7 @@ const RecipePage = () => {
               </div>
               <div className="ad-container"></div>
             </div>
-            <FooterSearchRecipe/>
+            <SearchRecipe/>
           </div>
         </>
       ) : (

@@ -8,7 +8,7 @@ import Trending from './trending/Trending'
 import Miss from './Miss/Miss'
 import Ideas from './ideas/Ideas'
 import PeelPeach from './peaches/PeelPeach'
-import FooterSearchBar from '../../Footer/SearchBar'
+import SearchBar from '../../Footer/SearchBar'
 import { BsAspectRatio } from 'react-icons/bs'
 const Home = () => {
   return (
@@ -17,8 +17,6 @@ const Home = () => {
     <div className='Home-page'>
       <div className='addvertise'><h1> Advertisement</h1>
       
-       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-      */}
       </div>
       <div className='comments-section'>
         <div className='heading-btn'>
@@ -107,7 +105,7 @@ const Home = () => {
       <div className="ad-idea"><h1> Advertisement</h1></div>
       <PeelPeach/>
       <br/>
-      <FooterSearchBar/>
+      <SearchBar/>
     </div>
     </>
   )

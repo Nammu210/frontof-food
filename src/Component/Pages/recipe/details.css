@@ -28,12 +28,11 @@
 .detail-wrapper
 {
     width: 60%;
-    /* margin: auto; */
+  
 }
 .ad-container{
     height: 80vh;
     width: 20rem;
-    /* border: 1px solid white; */
     background-color: white;
     text-align: center;
 }

@@ -21,11 +21,11 @@ const Signin = () => {
   const handleSignin = async (e) => {
     e.preventDefault();
     console.log(user);
-    const res = await axios.post(`${host}/user/signin`, user);
+    const res = await axios.post(`${host}/userdata/signin`, user);
     console.log(res);
     if ((res.data.msg = "user Signin successfully")) {
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("data", res.data);
+      localStorage.setItem("email", res.data.email);
       nav("/");
     }
   };
