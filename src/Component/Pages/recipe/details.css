@@ -1,11 +1,13 @@
 .yellow-container{
     width: 100%;
-    background-color: rgb(255, 221, 0);
+    background-color: lightblue;
     height: 3rem;
     display: flex;
     align-items: center;
 }
-
+.oo{
+    color: black;
+}
 .yellow-container div{
     width: 70%;
     margin-left: 4rem;

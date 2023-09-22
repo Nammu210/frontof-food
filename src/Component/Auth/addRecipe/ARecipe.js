@@ -5,8 +5,8 @@ import { useState } from 'react'
 import { AiOutlineCamera } from 'react-icons/ai'
 import { AiFillCamera } from 'react-icons/ai'
 import axios from 'axios'
-import FooterSearchRecipe from '../../../Footer/SearchRecipe'
-import { host } from '../../../Utility/api'
+import SearchRecipe from '../../Footer/SearchRecipe'
+import { host } from '../../Utility/api'
 
 const AddRecipe = () => {
 
@@ -53,7 +53,7 @@ const AddRecipe = () => {
         <>
             <div id='useradded-recipe'>
                 <div id='useradded-recipe-container'>
-                    <h2>ADD A RECIPE</h2>
+                    <h4>ADD A RECIPE</h4>
                     <input type='text' placeholder='Recipe Title' onChange={(e) => { setRecipeTitle(e.target.value) }}></input>
                     <textarea placeholder='Recipe Description' onChange={(e) => { setRecipeDescription(e.target.value) }}></textarea>
                     <h3>CATEGORIES</h3>
@@ -123,7 +123,7 @@ const AddRecipe = () => {
                     </div>
                 </div>
             </div>
-            <FooterSearchRecipe/>
+            <SearchRecipe/>
         </>
     )
 }

@@ -9,14 +9,13 @@ import Miss from './Miss/Miss'
 import Ideas from './ideas/Ideas'
 import PeelPeach from './peaches/PeelPeach'
 import SearchBar from '../../Footer/SearchBar'
-import { BsAspectRatio } from 'react-icons/bs'
+
 const Home = () => {
   return (
     <>
     <Poster/>
     <div className='Home-page'>
-      <div className='addvertise'><h1> Advertisement</h1>
-      
+      <div className='addvertise'><h1 className='pile'> Advertisement</h1> 
       </div>
       <div className='comments-section'>
         <div className='heading-btn'>
@@ -97,12 +96,12 @@ const Home = () => {
       </div>
       <Craving/>
       <Explore/>
-      <div className="ad-explore"> <h1> Advertisement</h1></div>
+      <div className="ad-explore"> <h1 className='pile'> Advertisement</h1></div>
       <br/>
       <Trending/>
       <Miss/>
       <Ideas/>
-      <div className="ad-idea"><h1> Advertisement</h1></div>
+      <div className="ad-idea"><h1 className='pile'> Advertisement</h1></div>
       <PeelPeach/>
       <br/>
       <SearchBar/>

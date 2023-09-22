@@ -9,7 +9,7 @@ import Search from '../../Pages/searchbar/Search'
 import Signin from '../../Auth/Signin'
 import Details from '../../Pages/recipe/Details'
 import User from '../../Auth/profile/User'
-import ARecipe from '../../Auth/userafterlogin/addRecipe/ARecipe'
+import ARecipe from '../../Auth/addRecipe/ARecipe'
 import RecipeBook from '../../Pages/recipe/RecipeBook'
 
 const Routing = () => {

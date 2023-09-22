@@ -12,8 +12,8 @@ const RecipePage = () => {
   const queryParams = new URLSearchParams(location.search);
 
   const query = queryParams.get("q");
-  console.log(query, "querry wiill be");
-//   console.log(fetchRecipe(query), "data is");
+  console.log(query, "query will be");
+
   useEffect(() => {
     console.log("useEffect is working");
     fetchRecipe(query).then((res) => {
@@ -93,7 +93,9 @@ const RecipePage = () => {
                   "Loading"
                 )}
               </div>
-              <div className="ad-container"></div>
+              <div className="ad-container">
+                <h1 class="main">Advertisement</h1>
+              </div>
             </div>
             <SearchRecipe/>
           </div>

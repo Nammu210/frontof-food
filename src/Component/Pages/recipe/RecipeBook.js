@@ -131,13 +131,13 @@ const RecipeBook = () => {
                     </div>   
                   </NavLink>
                 </div>
-                {/* <div> */}
+               
                   <p class="pl">....or....</p>
                   <br/>
                   <NavLink to="/addrecipe">
                     <p class="plus pli">Add Your Own Recipe</p>
                   </NavLink>
-                {/* </div> */}
+              
               </div>
             </div>
 
@@ -145,7 +145,7 @@ const RecipeBook = () => {
               ? data.map((item, index) => {
                   return (
                     <div key={index} className="saved-recipe-card">
-                      {/* {console.log(item.recipe[0].label, "recipelist")} */}
+                    
                       <NavLink to={`/details?q=${item.recipe[0].label}`}>
                         <div className="img">
                           <img

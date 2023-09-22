@@ -5,7 +5,7 @@ import Store from '../Utility/Redux/Store'
 import { Provider } from 'react-redux'
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify'
-import NavFile from '../Navbar/Nav/NavFile'
+import NavFile from '../Nav/NavFile'
 
 const Service = () => {
   return (

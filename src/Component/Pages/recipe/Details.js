@@ -26,7 +26,7 @@ const Details = () => {
     const email = localStorage.getItem("email");
     const token = localStorage.getItem("token");
     if (token) {
-      axios.post(`${host}/recipe/saverecipe/${email}`, { email, recipe }).then((res) => {
+      axios.post(`${host}/recipe/saverecipe/`, { email, recipe }).then((res) => {
         toast.success(`recipes added to saves`, {
           position: toast.POSITION.TOP_RIGHT,
         });
@@ -48,7 +48,7 @@ const Details = () => {
   return (
     <>
       <div className="yellow-container">
-        <div>
+        <div className="oo">
           <NavLink>PREVIOUS RECIPE</NavLink>
           <NavLink>NEXT RECIPE</NavLink>
         </div>
@@ -79,7 +79,7 @@ const Details = () => {
                     handleSaveRecipe(data[0].recipe);
                   }}
                 />
-                {/* <AddRecipe /> */}
+              
                 <BsDownload />
                 <BsPrinter />
                 <BsShare />
@@ -215,6 +215,7 @@ const Details = () => {
           <div className="ad-container">
             <div className="social-icons"></div>
             <div className="ad-wrapper ad">
+              <h1>Advertisement</h1>
               {/* <img src={ad} alt="adverise" /> */}
             </div>
           </div>

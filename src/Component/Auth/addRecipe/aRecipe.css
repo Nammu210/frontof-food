@@ -131,7 +131,7 @@
     height: 15rem;
     position: relative;
     text-align: center;
-    background: linear-gradient(to right, #89216b, #da4453);
+    background: linear-gradient(to right,violet,blue);
     cursor: pointer;
 }
 

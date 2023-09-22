@@ -7,6 +7,10 @@
     justify-content: space-between;
     line-height: 40px;
 }
+.main{
+    align-content: center;
+    padding-top: 240px;
+}
 .part-of-txt span{
     font-family: 'Maven Pro', sans-serif;
     text-transform: uppercase;

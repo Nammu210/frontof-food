@@ -101,6 +101,12 @@
     font-size:small;
 }
 
+.pile{
+   align-items: center;
+   padding-left: 60px;
+   padding-top: 50px;
+  
+}
 
 /* Style the stars based on their state (filled or empty) */
 .filled {
